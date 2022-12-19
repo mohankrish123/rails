@@ -1,0 +1,14 @@
+FROM ruby:3.1.2 AS rails-toolbox
+
+# Default directory
+ENV INSTALL_PATH /opt/app
+RUN mkdir -p $INSTALL_PATH
+
+# Install rails
+RUN gem install rails bundler
+WORKDIR $INSTALL_PATH
+RUN rails new /opt/app
+RUN  echo "bind 'tcp://0.0.0.0:3000'" >> config/puma.rb
+
+# Run a shell
+CMD ["rails server"]
