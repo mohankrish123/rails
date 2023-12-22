@@ -1,4 +1,4 @@
-# rails
+# RAILS APPLICATION PLAYGROUND
 
 ## Pre-requisites to install rails v7.1.2
 Nodejs v16 \
