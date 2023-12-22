@@ -3,7 +3,7 @@
 ## Pre-requisites to install rails v7.1.2
 Nodejs v16 \
 Yarn v1.22.21 \
-Ruby v3.1.2 \
+Ruby v3.1.2
 
 ## Useful rails commands
 ### How to create a rails project?
