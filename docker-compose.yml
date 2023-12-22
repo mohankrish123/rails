@@ -9,26 +9,28 @@ services:
     ports: 
       - '5432:5432'
     volumes:
-      - rails-postgres:/var/lib/postgresql/data
+      - ./rails-postgres:/var/lib/postgresql/data
 
   redis:
     image: redis:7.0
     ports:
       - '6379:6379'
     volumes:
-      - rails-redis:/var/lib/redis/data
+      - ./rails-redis:/var/lib/redis/data
 
   rails:
     build:
       context: .
       dockerfile: Dockerfile.rails
-    # volumes:
-    #   - rails:/opt/app
-    command: ["bundle","exec","puma"]
+    image: rails:latest
+    volumes:
+      - ./rails:/opt/app
+    #command: ["bundle","exec","puma"]
+    command: ["/bin/bash","-c","rails server -b 0.0.0.0"]
     ports:
       - '3000:3000'
 
-volumes:
-  rails-postgres:
-  rails-redis:
-  rails:
+# volumes:
+#   rails-postgres:
+#   rails-redis:
+#   rails:
