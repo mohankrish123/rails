@@ -39,3 +39,8 @@ end
 12345678910=> 1..10
 ```
 Refer: [For loops for ruby language](https://launchschool.com/books/ruby/read/loops_iterators) 
+
+
+### Practise ruby
+[Practise ruby](https://try.ruby-lang.org/)
+[Online ruby lab](https://replit.com/@mohankrish3/Practise-Ruby#main.rb)

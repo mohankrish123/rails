@@ -73,6 +73,16 @@ irb(main):258> x.include?(11)
 => true
 ```
 
+# How to print all the elements of an array?
+```
+irb(main):539> z.each {|element| p element}
+1
+2
+3
+4
+=> [1, 2, 3, 4]
+```
+
 # How to select only odd numbers from an array?
 ```
 irb(main):352> p x
