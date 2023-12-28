@@ -27,5 +27,8 @@ This stack spins up three containers:
 
 ### Command to spin up the stack
 ```
+docker-compose build
+```
+```
 docker-compose up -d
 ```
