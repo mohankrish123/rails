@@ -18,3 +18,14 @@ rails server
 ```
 rails c 
 ```
+
+# Docker Stack
+This stack spins up three containers:
+- Ruby
+- Postgres
+- Redis
+
+### Command to spin up the stack
+```
+docker-compose up -d
+```
