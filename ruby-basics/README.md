@@ -2,13 +2,6 @@
 # Ruby basics
 In ruby, by default everything returns nil where the function isn't returning anything specifically or designed to return something.
 
-### Methods Syntax
-```
-def say_hello(thing_to_say)
-  puts thing_to_say
-end
-```
-
 ### How to check different methods available?
 ```
 a = "Hello world!"
