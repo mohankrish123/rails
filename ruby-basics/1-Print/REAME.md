@@ -11,3 +11,10 @@ p "Hellow World!"
 ```
 printf "Hello World!"
 ```
+
+#### Get input string
+```
+printf ("What's your name: ")
+name = gets()
+puts ("Hello #{name}")
+```
