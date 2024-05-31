@@ -1,15 +1,22 @@
 class Hello
-    def hello(name)
-      puts ("Hello #{name}!")
-    end 
+  def initialize(firstname)
+    @firstname = firstname
   end
 
-object = Hello.new
-#object.hello("Mohan")
+  def hello1()
+    puts ("Hello #@firstname!")
+  end
 
-def say_hello(thing_to_say)
-  puts thing_to_say
-  puts ("#{thing_to_say}")
+  def hello2(lastname)
+    @lastname = lastname 
+    puts ("Hello #@lastname!")
+  end
 end
 
-say_hello("Mohan")
+puts "## Example to test the initialize method ##"
+object = Hello.new("Mohan")
+object.hello1
+puts ""
+
+puts "## Example which passes instance variable at method level without initialization during object creation ##"
+object.hello2("Varupula")
