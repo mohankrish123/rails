@@ -18,3 +18,11 @@ printf ("What's your name: ")
 name = gets()
 puts ("Hello #{name}")
 ```
+
+#### Convert number to string
+```
+number = 1
+str = "This number is: "
+
+puts str + number.
+```
