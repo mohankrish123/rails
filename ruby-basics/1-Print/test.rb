@@ -14,3 +14,34 @@ puts "Basically, we can't add a number and a string straightaway. We have to con
 number = 1
 str = "This number is: "
 puts str + number.to_s
+puts ("")
+
+puts ("*Experiment3*")
+puts ("Experiment to show how different prints work")
+puts ("")
+
+puts ("#### Testing puts method ####")
+puts ("Hello world!")
+puts ("Result: Prints with a new line")
+puts ()
+puts ("Result: puts method don't print nil. It only displays strings")
+puts ("")
+
+puts ("#### Testing p method ####")
+p ("Hello world!")
+puts ("Result: Prints with a new line and returns")
+
+p ()
+puts ("Result: Only p method prints nil")
+puts ("")
+
+puts ("#### Testing print method ####")
+print ("Hello world!")
+puts ("Result: Prints with no new line")
+print ()
+puts ("Result: print method don't print nil")
+puts ("")
+
+puts ("#### Testing printf method ####")
+printf ("Hello world!")
+puts ("Result: Prints with no new line. Identified print and printf are same")

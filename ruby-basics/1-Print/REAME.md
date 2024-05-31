@@ -24,5 +24,5 @@ puts ("Hello #{name}")
 number = 1
 str = "This number is: "
 
-puts str + number.
+puts str + number.to_s
 ```
