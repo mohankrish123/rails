@@ -1,6 +1,7 @@
 # Array
 ```
 x = [1,2,3,4]
+x = Array.new()
 ```
 
 ## How to create a range" and convert to array?
