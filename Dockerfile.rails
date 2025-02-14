@@ -29,8 +29,10 @@ COPY --from=node /usr/bin/yarn /usr/bin/yarn
 #Installing required gems
 RUN gem install bundler webpacker
 
+COPY Gemfile ./Gemfile
+
 # Install rails gem & creates a new rails project
-RUN gem install rails && \
+RUN bundle install && \
     rails new . --database=postgresql
 
 COPY database.yml ./config/database.yml
