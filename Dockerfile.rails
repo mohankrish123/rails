@@ -2,7 +2,7 @@
 FROM ruby:3.1.2 AS base
 USER root
 WORKDIR /app
-RUN apt update && apt install curl net-tools gnupg jq htop wget git -y
+RUN apt update && apt install curl net-tools gnupg jq htop wget git vim -y
 
 # Install Node
 FROM base AS node
@@ -31,4 +31,6 @@ RUN gem install bundler webpacker
 
 # Install rails gem & creates a new rails project
 RUN gem install rails && \
-    rails new .
+    rails new . --database=postgresql
+
+COPY database.yml ./config/database.yml
