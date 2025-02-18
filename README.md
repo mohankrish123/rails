@@ -1,4 +1,5 @@
 # RAILS APPLICATION PLAYGROUND
+This spins up a rails application which interacts with Postgres and Redis.
 
 ## Pre-requisites to install rails v7.1.2
 Nodejs v16 \
