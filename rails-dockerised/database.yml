@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: rails
+  password: rails  
+  host: postgres # This is the docker-compose service name
+  port: 5432
+  timeout: 5000
+
+
+development:
+  <<: *default
+  database: app_development
+
+
+release:
+  <<: *default
+  database: <%= ENV.fetch("DB_DATABASE", "postgres") %> 
+  username: <%= ENV.fetch("DB_USERNAME", "rails") %>
+  password: <%= ENV.fetch("DB_PASSWORD", "rails") %>
+  host: <%= ENV.fetch("DB_HOST", "postgres") %>
+  sslmode: require
+  aws_rds_iam_auth_token_generator: custom
