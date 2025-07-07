@@ -14,10 +14,10 @@ Instead of using RDS username/password, IAM auth is secure. So, configure IAM au
    - It creates a custom auth token generator, which facilitates token generation.
 4. Add DB related envs to the `.env`
     ```
-    DB_HOST=test-postgres-db.cby25vk2uso7.ap-southeast-2.rds.amazonaws.com
-    DB_USERNAME=iam_user
-    DB_DATABASE=release
-    RAILS_ENV=release
+    DB_HOST=<db host>
+    DB_USERNAME=<db username>
+    DB_DATABASE=<db name>
+    RAILS_ENV=<rails env>
     ```
 5. Configure the release environment config in [database.yml](../database.yml)
     ```
